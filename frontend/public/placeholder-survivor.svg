@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" fill="none">
+  <rect width="320" height="180" rx="16" fill="#18181B"/>
+  <circle cx="84" cy="74" r="28" fill="#3F3F46"/>
+  <rect x="52" y="108" width="64" height="40" rx="8" fill="#27272A"/>
+  <path d="M156 54h120M156 86h88M156 118h104" stroke="#71717A" stroke-width="10" stroke-linecap="round"/>
+  <text x="24" y="168" fill="#A1A1AA" font-family="Arial, sans-serif" font-size="14">Placeholder Survivor Guide Art</text>
+</svg>
