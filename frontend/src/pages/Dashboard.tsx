@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../lib/api';
 import PageHeader from '../components/PageHeader';
+import StateNotice from '../components/StateNotice';
 
 interface DashboardData {
   totalMatches: number;
@@ -12,14 +13,16 @@ interface DashboardData {
 
 export default function Dashboard() {
   const [data, setData] = useState<DashboardData | null>(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    api.getDashboard().then(setData);
+    api.getDashboard().then(setData).catch((err: Error) => setError(err.message || 'Failed to load dashboard.'));
   }, []);
 
   return (
     <>
       <PageHeader title="Dashboard" subtitle="Quick pulse on your latest survivor sessions." />
+      {error && <StateNotice message={error} tone="error" />}
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {[
           ['Matches Logged', data?.totalMatches ?? '...'],

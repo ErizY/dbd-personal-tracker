@@ -14,6 +14,7 @@ A local-first web app for tracking Dead by Daylight survivor matches, tech guide
 - Perk catalog
 - Build storage
 - Stats charts for outcomes and killers faced
+- Placeholder non-copyrighted guide images/icons
 
 ## Quick Start
 
@@ -23,7 +24,7 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+python -m uvicorn main:app --reload --port 8000
 ```
 
 ### 2) Frontend
@@ -35,5 +36,10 @@ npm run dev
 
 Open http://127.0.0.1:5173
 
+## Troubleshooting
+- If you see `ENOENT ... package.json`, you are likely at repo root. Run frontend commands inside `frontend/`.
+- If `cd backend` fails, you are on the wrong branch/commit. Ensure the scaffold commit is checked out.
+- If `No module named uvicorn`, activate your backend virtual environment and reinstall requirements.
+
 ## Privacy + Assets
-This project stores data locally in SQLite and uses text-only placeholders/icons (no copyrighted DBD art).
+This project stores data locally in SQLite and uses placeholder text/icons and custom SVG placeholders (no copyrighted DBD art).
